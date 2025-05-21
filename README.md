@@ -13,16 +13,18 @@ This project demonstrates how to implement **real-time communication** in a web 
 
 ## 📂 Project Structure
 ```
-project/
-│
-├── app.py # Flask backend handling SSE and long polling
-├── requirements.txt # Python dependencies
-├── templates/
-│ └── index.html # Main HTML UI
+web-transport-protocols/
+├── routes/
+│   ├── __init__.py       # contains create_app()
+│   ├── sse.py            # SSE Blueprint
+│   ├── longpoll.py       # Long Poll Blueprint
 ├── static/
-│ ├── longpoll.js # JS for long polling client
-│ └── sse.js # JS for SSE client
-└── README.md # Project documentation
+│   ├── sse.js
+│   └── longpoll.js
+├── templates/
+│   └── index.html        # Main UI template
+├── run.py                # Entry point
+└── requirements.txt
 ```
 ---
 
