@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Realtime Web Demo</title>
+</head>
+
+<body>
+    <h2>Realtime Demo</h2>
+
+    <div>
+        <h3>Long Polling</h3>
+        <button onclick="startLongPoll()">Start</button>
+        <button onclick="stopLongPoll()">Stop</button>
+        <ul id="longpoll-output"></ul>
+    </div>
+
+    <div>
+        <h3>SSE</h3>
+        <button onclick="startSSE()">Start SSE</button>
+        <button onclick="stopSSE()">Stop SSE</button>
+        <div id="log">
+            <h4>Log</h4>
+        </div>
+        <div id="messages">
+            <h4>Messages</h4>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='longpoll.js') }}"></script>
+    <script src="{{ url_for('static', filename='sse.js') }}"></script>
+</body>
+
+</html>
